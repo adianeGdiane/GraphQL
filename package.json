@@ -1,7 +1,7 @@
 {
   "scripts": {
     "predeploy": "echo 'No build step required'",
-    "deploy": "gh-pages -d front-end/static"
+    "deploy": "gh-pages -d front-end/static/html"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
