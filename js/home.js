@@ -20,7 +20,6 @@ export async function fetchUserData(token) {
     }
   
     const result = await response.json();
-    console.log(result);
     displayData(result.data)
   } catch (error) {
       localStorage.removeItem('token')

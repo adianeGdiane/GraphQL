@@ -36,8 +36,6 @@ async function encodeCredentials(usernameOrEmail, password) {
 }
 async function GetUserToken(UsernameOrEmail, Password) {
     let UserInfoEncode = await encodeCredentials(`${UsernameOrEmail}:${Password}`)
-    console.log(`${UsernameOrEmail}:${Password}`);
-    console.log(UserInfoEncode);
 
     try {
         const response = await fetch('https://learn.zone01dakar.sn/api/auth/signin', {
@@ -53,7 +51,6 @@ async function GetUserToken(UsernameOrEmail, Password) {
           
         const data = await response.json();
         localStorage.setItem('token' ,data)
-        console.log(data);
         fetchUserData(data)
     } catch (error) {
         errorLogin.textContent = error.message
