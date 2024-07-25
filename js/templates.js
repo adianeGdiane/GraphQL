@@ -28,7 +28,7 @@ const homeHtml = `
     <p id="lastEarn"></p>
     <div id="graphs">
         <div id="xpBarChart">
-            <h3>last 10 projects:</h3>
+            <h3>last 10 projects(by most xp):</h3>
         </div>
         <div id="auditPieChart">
             <h3>Audits :</h3>

@@ -1,7 +1,8 @@
-import { queryUser } from "../../../static/js/userQuery.js";
 import { getGraphData } from "./graphs.js";
 import { container, logout } from "./index.js";
+import { fetchLogin } from "./login.js";
 import { homeHtml, loginHtml } from "./templates.js";
+import { queryUser } from "./userQuery.js";
 
 export async function fetchUserData(token) {
   try {
@@ -25,8 +26,8 @@ export async function fetchUserData(token) {
       localStorage.removeItem('token')
       container.innerHTML = loginHtml
       const errorLogin = document.getElementById('errorLogin')
-      errorLogin.textContent = 'Sorry Something Wrong Happened :('
-
+      errorLogin.textContent = 'Sorry Something Wrong Happened:('
+      fetchLogin()
   }
 
 }
