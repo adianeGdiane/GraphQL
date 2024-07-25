@@ -19,6 +19,7 @@ func LoginHandle(w http.ResponseWriter, r *http.Request) {
 			fmt.Println(err1.Error())
 			return
 		}
+		r.Header.Set(http.StatusText(404), http.StatusText(404))
 		return
 	}
 
